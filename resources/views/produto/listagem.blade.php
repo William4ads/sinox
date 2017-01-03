@@ -12,6 +12,7 @@
  * {{ condicao ? ’valor_se_true’ : ’valor_se_false’}}
  */
 ?>
+
 @extends('layout/principal')
 
 @section('titulo', 'Lista de Produtos')
@@ -37,6 +38,16 @@
             </tr>
             @endforeach 
         </table>
-    @endif    
+    @endif  
+    
+    @if(!empty(old('produto')))
+        <div class="alert alert-success">
+             <!--Para acessar a variavel passada pelo input, como ela vem de outro view
+                 e é repassada para esta devemos usar o método abaixo.
+             -->
+            <strong>Sucesso!</strong> O produto {{ old('produto') }} foi adicionado.
+        </div>
+    @endif
+
 @stop   <!--marca o fim da section--> 
         
