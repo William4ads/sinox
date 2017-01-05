@@ -1,0 +1,73 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 5, 2017, 4:06:12 PM
+    Author     : wiliam
+*/
+
+
+body {
+    background-color: #dddddd;
+    color: rgba(0,0,0,1);
+}
+
+/* 
+    Classe para a div principal
+*/
+.container {
+    width: 75%;
+    background-color: #ffffff;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    padding: 2.2%;
+}  
+
+/*
+    Classe para posicionar a imagem que flutua a esquerda
+*/
+.logo {
+    position: absolute;
+    left: 0%;
+    top: 3%;
+}
+
+header {
+    background-color: #3d6983;
+}
+
+/* -------------------- menu ------------------------ */
+nav {
+    display: block;
+}
+
+nav ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0%;
+    right: 12.8%;
+}
+
+nav li {
+    display: inline-block;
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 2px;
+}
+
+/* texto do super inox */
+
+header h1 {
+    position: relative;
+    top: 10%;
+    right: -15%;
+}
+
+/* ----------------------- fim menu --------------------*/
+
+section {
+    margin-top: 10%;
+}
