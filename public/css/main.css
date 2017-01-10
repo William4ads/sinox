@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Aladin);
+
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -6,57 +9,98 @@ and open the template in the editor.
 /* 
     Created on : Jan 5, 2017, 4:06:12 PM
     Author     : wiliam
-*/
+
+DISPLAY: TABLE; para forçar o objeto com esta propriedade a circular os objetos com float
+CLEAR:BOTH; pode funcionar melhor que o display:table;  adicione clear: both; depois de todos os flutuantes.
 
 
-body {
-    background-color: #dddddd;
-    color: rgba(0,0,0,1);
+    background-image: url("../_imagens/fundo-cabecalho.png");  
+
+    box-shadow: 2px 2px 4px rgba(0,0,0,1);
+
+    display: table;
+
+/*CRIANDO O MENU DROPDOWN
+removendo o bullets da lista, colocando bordar e flutuar a esquerda
+
+/*position relative para podermos posicionar o sub menu
+ul.menu li {
+    display: inline;
+    position: relative;
+    float: left;
+ 
+BORDER-RADIUS => supEsq supDir infDir infEsq (arredonda os cantos)
+
+    border-radius: 40px 5px  0px 0px;    
+    text-decoration: none;
 }
 
-/* 
+ul.menu li a:hover {
+    background-color: orange;
+}
+
+ul.menu li ul li:hover{    
+    background-color: orange;
+    cursor: pointer;
+}
+
+/*FAZ O SUBMENU APARECER
+ul.menu li:hover ul, .menu li.over ul{
+    display: block;
+}
+
+    font-size: 60px;
+    font-weight: bolder;
+
+
+----------------------  inicio arquivo CSS ------------------
+
+
+    Zerando a margin e o paddin para todos os navegadores*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    background-color: #f3f3f3;
+}
+
+/*
     Classe para a div principal
 */
 .container {
-    width: 75%;
+    width: 85%;
     background-color: #ffffff;
-    margin: auto;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-    padding: 2.2%;
+    margin: 10px auto 0px auto; /*começa pelo topo e vai sentido horario*/
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);/*horizontal, vertical, espassamento e cor com alfa, pode ser qualquer tipo de cor*/
+    padding: 0.1%;
 }  
 
-/*
+/* -------------------- Inicio MENU ------------------------ 
+
+
     Classe para posicionar a imagem que flutua a esquerda
 */
+
 .logo {
     position: absolute;
-    left: 0%;
+    left: 1%;
     top: 3%;
 }
 
 header {
-    background-color: #3d6983;
+    background-color: #000000;
+    /*background-image: url("/fundo-cabecalho.png");  */
+    height: 80px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.5);
+        
 }
 
-/* -------------------- menu ------------------------ */
-nav {
-    display: block;
-}
-
-nav ul{
-    list-style: none;
-    text-transform: uppercase;
-    position: absolute;
-    top: 0%;
-    right: 12.8%;
-}
-
-nav li {
-    display: inline-block;
-    background-color: #dddddd;
-    padding: 10px;
-    margin: 2px;
-}
 
 /* texto do super inox */
 
@@ -64,10 +108,66 @@ header h1 {
     position: relative;
     top: 10%;
     right: -15%;
+    color: #ffffff;
+    font-size: 4em;
+}
+
+
+nav {
+    display: block;
+    
+}
+
+nav ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    margin: 2%;
+    top: 0%;
+    right: 11.0%;
+}
+
+nav li {
+    display: inline-block;
+    background-color: #dddddd;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 0 0 5px 0;/* supEsq supDir infDir infEsq (arredonda os cantos) */
+    box-shadow: 1px 1px 1px white;
 }
 
 /* ----------------------- fim menu --------------------*/
 
 section {
-    margin-top: 10%;
+    margin: 0px auto 0px auto; /*começa pelo topo e vai sentido horario*/
+    background-color: #ffffff;
+}
+
+section h1 {
+    background-color: #cccccc;
+    margin-left: 30px;
+    width: 300px;
+    padding-left: 5px;
+    box-shadow: 1px 1px 1px black;
+}
+
+article {
+    float: left;    
+}
+
+article figure {
+    border: 8px solid #ffffff;
+    box-shadow: 0px 0px 4px black;
+    width: 400px;   
+    margin-left: 13%;
+}
+
+footer {
+    clear: both;
+    margin: 0px auto 0px auto; /*começa pelo topo e vai sentido horario*/
+    background-color: #000000;    
+    text-align: center;
+    color: white;
+    padding: 30px;
+    box-shadow: 0px -3px 3px rgba(0,0,0,0.5);
 }
