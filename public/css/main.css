@@ -35,15 +35,6 @@ BORDER-RADIUS => supEsq supDir infDir infEsq (arredonda os cantos)
     text-decoration: none;
 }
 
-ul.menu li a:hover {
-    background-color: orange;
-}
-
-ul.menu li ul li:hover{    
-    background-color: orange;
-    cursor: pointer;
-}
-
 /*FAZ O SUBMENU APARECER
 ul.menu li:hover ul, .menu li.over ul{
     display: block;
@@ -51,6 +42,8 @@ ul.menu li:hover ul, .menu li.over ul{
 
     font-size: 60px;
     font-weight: bolder;
+
+box-shadow: 0px 0px 1px rgba(0,0,0,0.1);/*horizontal, vertical, espassamento e cor com alfa, pode ser qualquer tipo de cor
 
 
 ----------------------  inicio arquivo CSS ------------------
@@ -65,7 +58,7 @@ ul.menu li:hover ul, .menu li.over ul{
 body {
     font-family: arial, helvetica, sans-serif;
     font-size: 12px;
-    background-color: #f3f3f3;
+    background-color: #fffff1;
 }
 
 /*
@@ -74,9 +67,9 @@ body {
 .container {
     width: 85%;
     background-color: #ffffff;
-    margin: 10px auto 0px auto; /*começa pelo topo e vai sentido horario*/
-    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);/*horizontal, vertical, espassamento e cor com alfa, pode ser qualquer tipo de cor*/
-    padding: 0.1%;
+    margin: 0px auto 0px auto; /*começa pelo topo e vai sentido horario*/    
+    position: relative;
+    padding-top: 70px;
 }  
 
 /* -------------------- Inicio MENU ------------------------ 
@@ -87,17 +80,19 @@ body {
 
 .logo {
     position: absolute;
-    left: 1%;
-    top: 3%;
+    left: -9%;
+    top: 8%;
 }
 
 header {
     background-color: #000000;
     /*background-image: url("/fundo-cabecalho.png");  */
-    height: 80px;
-    margin-top: 15px;
+    height: 130px;
+    margin-top: 0px;
     margin-bottom: 25px;
-    box-shadow: 0px 3px 3px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 3px rgba(0,0,0,1);
+    border-top: 40px solid #666666;
+    border-bottom: 40px solid #666666;
         
 }
 
@@ -105,6 +100,7 @@ header {
 /* texto do super inox */
 
 header h1 {
+    font: normal normal 36px Trebuchet MS,sans-serif;
     position: relative;
     top: 10%;
     right: -15%;
@@ -120,20 +116,21 @@ nav {
 
 nav ul{
     list-style: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     position: absolute;
-    margin: 2%;
-    top: 0%;
-    right: 11.0%;
+    top: 1.7%;
 }
 
 nav li {
     display: inline-block;
-    background-color: #dddddd;
-    padding: 10px;
-    margin: 2px;
-    border-radius: 0 0 5px 0;/* supEsq supDir infDir infEsq (arredonda os cantos) */
-    box-shadow: 1px 1px 1px white;
+    margin-left: 60px;
+    font: normal normal 16px 'Roboto',sans-serif;
+    padding: 3px;
+}
+
+nav ul li:hover{    
+    background-color: #cccccc;
+    cursor: pointer;
 }
 
 /* ----------------------- fim menu --------------------*/
@@ -141,12 +138,13 @@ nav li {
 section {
     margin: 0px auto 0px auto; /*começa pelo topo e vai sentido horario*/
     background-color: #ffffff;
+    border: 1px solid black;
 }
 
 section h1 {
+    font: normal normal 36px Trebuchet MS,sans-serif;
     background-color: #cccccc;
-    margin-left: 30px;
-    width: 300px;
+    width: 100%;
     padding-left: 5px;
     box-shadow: 1px 1px 1px black;
 }
@@ -158,8 +156,7 @@ article {
 article figure {
     border: 8px solid #ffffff;
     box-shadow: 0px 0px 4px black;
-    width: 400px;   
-    margin-left: 13%;
+    width: 430px;
 }
 
 footer {
@@ -169,5 +166,5 @@ footer {
     text-align: center;
     color: white;
     padding: 30px;
-    box-shadow: 0px -3px 3px rgba(0,0,0,0.5);
+    box-shadow: -2px -2px 3px rgba(0,0,0,1);
 }

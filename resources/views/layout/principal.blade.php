@@ -13,31 +13,37 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8"/>
-        <link href="/css/app.css" rel="stylesheet">
-        <link href="/css/custom.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
+        <!-- Styles e scripts --> 
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!--
+        <script language="javascript" src="caminho para o arquivo"></script>
+        --> 
         <title>@yield('titulo')</title>
-    </head>
+    </head>    
     <body>
-        <div class="container">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="/produtos">
-                            Estoque Laravel
-                        </a>
-                    </div>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/produtos">Listagem</a></li>
-                        <li><a href="/produtos/novo">Novo</a></li>
+        <div class="container"> 
+            <header>
+                <img class="logo" src="img/Logo2.png">
+                <h1>Super Inox Uberaba</h1>
+                <nav>                    
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/sobre">Sobre</a></li>
+                        <li><a href="/produtos">Produtos</a></li>
+                        <li><a href="/contato">Contato</a></li>
                     </ul>
-                </div>
-            </nav>
+                </nav>
+            </header>
             
             @yield('conteudo')
             
-            <footer class="footer">
-                <p>© Aprendendo Laravel.</p>
-            </footer>            
+           <footer>
+                <p>Copyright &copy 2017 - Super Inox Uberaba</p>
+            </footer>
         </div>
     </body>
 </html>
