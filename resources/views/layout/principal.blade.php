@@ -27,23 +27,24 @@
     <body>
         <div class="container"> 
             <header>
-                <img class="logo" src="img/Logo2.png">
-                <h1>Super Inox Uberaba</h1>
+                <div id="logo">
+                    <img class="logo" src="img/Logo2.png">
+                    <h1>Super Inox Uberaba</h1>
+                </div>                
                 <nav>                    
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/sobre">Sobre</a></li>
-                        <li><a href="/produtos">Produtos</a></li>
+                        <li><a href="/sobre">Sobre</a></li>                        
                         <li><a href="/contato">Contato</a></li>
                     </ul>
-                </nav>
-            </header>
-            
-            @yield('conteudo')
-            
+                </nav>                
+            </header>          
+
+                @yield('conteudo')
+                       
            <footer>
                 <p>Copyright &copy 2017 - Super Inox Uberaba</p>
-            </footer>
+           </footer>
         </div>
     </body>
 </html>

@@ -19,35 +19,17 @@
     
 @section('conteudo')
 
-    @if(empty($produtos))
-        <div class="alert alert-danger">
-            Você não tem nenhum produto cadastrado.
-        </div>
-    @else    
-        <h1>Listagem dos produtos</h1>
-        <table class="table table-striped table-bordered table-hover"> 
-            <!-- utilizando o blade podemos usar o '@' para marcar o código PHP-->
-            @foreach ($produtos as $p)
-            <tr>
-                <td> {{ $p->id }} </td>
-                <td> {{ $p->produto }} </td>
-                <td> {{ $p->descricao }} </td>
-                <td> <a href='/produtos/mostra/{{$p->id }}'>
-                        <span class="glyphicon glyphicon-search"></span> 
-                    </a></td>
-            </tr>
-            @endforeach 
-        </table>
-    @endif  
-    
-    @if(!empty(old('produto')))
-        <div class="alert alert-success">
-             <!--Para acessar a variavel passada pelo input, como ela vem de outro view
-                 e é repassada para esta devemos usar o método abaixo.
-             -->
-            <strong>Sucesso!</strong> O produto {{ old('produto') }} foi adicionado.
-        </div>
-    @endif
+ <h2>Produtos</h2>
+    <ol>
+        <li>
+            <a href="/produto/novo">
+                <figure>
+                    <img src="/img/Inox_tubo1.jpg" alt="Super Inox">
+                    <figcaption>Colheres em Inox</figcaption>
+                </figure>
+            </a>
+        </li>
+    </ol>
 
 @stop   <!--marca o fim da section--> 
         
