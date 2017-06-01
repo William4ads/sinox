@@ -32,7 +32,7 @@
                     <h1>Super Inox Uberaba</h1>
                 </div>                
                 <nav>                    
-                    <ul>
+                    <ul class="menu">
                         <li><a href="/">Home</a></li>
                         <li><a href="/sobre">Sobre</a></li>                        
                         <li><a href="/contato">Contato</a></li>

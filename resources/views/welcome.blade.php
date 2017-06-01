@@ -5,7 +5,7 @@
 @section('conteudo')
     <section>
         <h1>Produtos em Destaque</h1>
-        <ul>
+        <ul class="menu">
             <li>
                 <article>  
                     <figure>
